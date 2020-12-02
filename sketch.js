@@ -27,6 +27,7 @@ function setup() {
 
 	//Create the Bodies Here.
 	stone = new Stone(110,490,5);
+	ground = new Ground(500,660,1600,10);
 	mango1 = new Mango(630,100,40);
 	mango2 = new Mango(700,180,40);
 	mango3 = new Mango(850,160,40);
@@ -40,9 +41,9 @@ function setup() {
 	mango11= new Mango(750,290,40);
 
 
-    string = new SlingShot(stone.body,{x:110,y:500});
+    string = new SlingShot(stone.body,{x:110,y:540});
 
-	boy = createSprite(160,550);
+	boy = createSprite(160,600);
 	boy.addImage(boyimg);
 	boy.scale=0.09;
 
@@ -74,7 +75,7 @@ function draw() {
 
   drawSprites();
 
-  
+  ground.display();
   stone.display();
   mango1.display();
   mango2.display();
